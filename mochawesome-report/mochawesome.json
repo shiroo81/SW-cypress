@@ -1,0 +1,470 @@
+{
+  "stats": {
+    "suites": 11,
+    "tests": 10,
+    "passes": 10,
+    "pending": 0,
+    "failures": 0,
+    "start": "2021-11-25T21:55:09.018Z",
+    "end": "2021-11-25T21:55:18.720Z",
+    "duration": 9702,
+    "testsRegistered": 10,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "a8af39bc-93f2-403d-8ca0-c5472961dfa0",
+      "title": "",
+      "fullFile": "cypress/integration/search-planets.spec.ts",
+      "file": "cypress/integration/search-planets.spec.ts",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "0f98c332-d3b6-46a6-afdb-970060084077",
+          "title": "Given there is Star Wars information needed",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [],
+          "suites": [
+            {
+              "uuid": "5aea2c9e-3ae1-49a8-b2a7-218b679cb0dc",
+              "title": "When I search for Star Wars planets",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "should find all Tatooine's details in the results",
+                  "fullTitle": "Given there is Star Wars information needed When I search for Star Wars planets should find all Tatooine's details in the results",
+                  "timedOut": null,
+                  "duration": 1387,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.dataCy(\"radioPlanets\").click();\ncy.dataCy(\"inputSearch\")\n    .clear()\n    .type(planet.name);\ncy.intercept({\n    method: \"GET\",\n    url: \"https://swapi.dev/api/planets/*\"\n}).as(\"getPlanets\");\ncy.get(\"button\")\n    .contains(\"Search\")\n    .click();\ncy.wait(\"@getPlanets\");\ncy.dataCy(\"planetName\").should(\"have.text\", planet.name);\ncy.dataCy(\"population\").contains(planet.population);\ncy.dataCy(\"climate\").contains(planet.climate);\ncy.dataCy(\"gravity\").contains(planet.gravity);",
+                  "err": {},
+                  "uuid": "c972504b-8329-436f-9598-9dfab9d89047",
+                  "parentUUID": "5aea2c9e-3ae1-49a8-b2a7-218b679cb0dc",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "c972504b-8329-436f-9598-9dfab9d89047"
+              ],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 1387,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            },
+            {
+              "uuid": "b56aad0a-95e4-43a0-a2f8-5f6005dab717",
+              "title": "When I search for Star Wars planets",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "should find all Alderaan's details in the results",
+                  "fullTitle": "Given there is Star Wars information needed When I search for Star Wars planets should find all Alderaan's details in the results",
+                  "timedOut": null,
+                  "duration": 1112,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.dataCy(\"radioPlanets\").click();\ncy.dataCy(\"inputSearch\")\n    .clear()\n    .type(planet.name);\ncy.intercept({\n    method: \"GET\",\n    url: \"https://swapi.dev/api/planets/*\"\n}).as(\"getPlanets\");\ncy.get(\"button\")\n    .contains(\"Search\")\n    .click();\ncy.wait(\"@getPlanets\");\ncy.dataCy(\"planetName\").should(\"have.text\", planet.name);\ncy.dataCy(\"population\").contains(planet.population);\ncy.dataCy(\"climate\").contains(planet.climate);\ncy.dataCy(\"gravity\").contains(planet.gravity);",
+                  "err": {},
+                  "uuid": "1475e107-e58c-4b26-ad10-d5fa45ecc1ce",
+                  "parentUUID": "b56aad0a-95e4-43a0-a2f8-5f6005dab717",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "1475e107-e58c-4b26-ad10-d5fa45ecc1ce"
+              ],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 1112,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            },
+            {
+              "uuid": "ae0cc703-d609-433e-af33-a062d8a4ef63",
+              "title": "When I search for Star Wars planets",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "should find all Yavin IV's details in the results",
+                  "fullTitle": "Given there is Star Wars information needed When I search for Star Wars planets should find all Yavin IV's details in the results",
+                  "timedOut": null,
+                  "duration": 1050,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.dataCy(\"radioPlanets\").click();\ncy.dataCy(\"inputSearch\")\n    .clear()\n    .type(planet.name);\ncy.intercept({\n    method: \"GET\",\n    url: \"https://swapi.dev/api/planets/*\"\n}).as(\"getPlanets\");\ncy.get(\"button\")\n    .contains(\"Search\")\n    .click();\ncy.wait(\"@getPlanets\");\ncy.dataCy(\"planetName\").should(\"have.text\", planet.name);\ncy.dataCy(\"population\").contains(planet.population);\ncy.dataCy(\"climate\").contains(planet.climate);\ncy.dataCy(\"gravity\").contains(planet.gravity);",
+                  "err": {},
+                  "uuid": "f84d47e7-a60e-4286-b015-fa107c2f8bc1",
+                  "parentUUID": "ae0cc703-d609-433e-af33-a062d8a4ef63",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "f84d47e7-a60e-4286-b015-fa107c2f8bc1"
+              ],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 1050,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            },
+            {
+              "uuid": "3a2b1edf-143d-4805-aac7-6de139ae9f16",
+              "title": "When I search for Star Wars planets",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "should find all Hoth's details in the results",
+                  "fullTitle": "Given there is Star Wars information needed When I search for Star Wars planets should find all Hoth's details in the results",
+                  "timedOut": null,
+                  "duration": 906,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.dataCy(\"radioPlanets\").click();\ncy.dataCy(\"inputSearch\")\n    .clear()\n    .type(planet.name);\ncy.intercept({\n    method: \"GET\",\n    url: \"https://swapi.dev/api/planets/*\"\n}).as(\"getPlanets\");\ncy.get(\"button\")\n    .contains(\"Search\")\n    .click();\ncy.wait(\"@getPlanets\");\ncy.dataCy(\"planetName\").should(\"have.text\", planet.name);\ncy.dataCy(\"population\").contains(planet.population);\ncy.dataCy(\"climate\").contains(planet.climate);\ncy.dataCy(\"gravity\").contains(planet.gravity);",
+                  "err": {},
+                  "uuid": "4afd5a1f-ebf0-4425-845b-a63a82aef611",
+                  "parentUUID": "3a2b1edf-143d-4805-aac7-6de139ae9f16",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "4afd5a1f-ebf0-4425-845b-a63a82aef611"
+              ],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 906,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            },
+            {
+              "uuid": "db997d5b-da81-43af-8d1c-9d2fa7d52797",
+              "title": "When I search for Star Wars planets",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "should find all Dagobah's details in the results",
+                  "fullTitle": "Given there is Star Wars information needed When I search for Star Wars planets should find all Dagobah's details in the results",
+                  "timedOut": null,
+                  "duration": 1010,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.dataCy(\"radioPlanets\").click();\ncy.dataCy(\"inputSearch\")\n    .clear()\n    .type(planet.name);\ncy.intercept({\n    method: \"GET\",\n    url: \"https://swapi.dev/api/planets/*\"\n}).as(\"getPlanets\");\ncy.get(\"button\")\n    .contains(\"Search\")\n    .click();\ncy.wait(\"@getPlanets\");\ncy.dataCy(\"planetName\").should(\"have.text\", planet.name);\ncy.dataCy(\"population\").contains(planet.population);\ncy.dataCy(\"climate\").contains(planet.climate);\ncy.dataCy(\"gravity\").contains(planet.gravity);",
+                  "err": {},
+                  "uuid": "ba77d173-3f92-4c6c-8af1-4fde3d93f87d",
+                  "parentUUID": "db997d5b-da81-43af-8d1c-9d2fa7d52797",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "ba77d173-3f92-4c6c-8af1-4fde3d93f87d"
+              ],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 1010,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            },
+            {
+              "uuid": "02bc60c7-4fb8-4bc0-a8fa-6832f3852ffb",
+              "title": "When I search for Star Wars planets",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "should find all Bespin's details in the results",
+                  "fullTitle": "Given there is Star Wars information needed When I search for Star Wars planets should find all Bespin's details in the results",
+                  "timedOut": null,
+                  "duration": 771,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.dataCy(\"radioPlanets\").click();\ncy.dataCy(\"inputSearch\")\n    .clear()\n    .type(planet.name);\ncy.intercept({\n    method: \"GET\",\n    url: \"https://swapi.dev/api/planets/*\"\n}).as(\"getPlanets\");\ncy.get(\"button\")\n    .contains(\"Search\")\n    .click();\ncy.wait(\"@getPlanets\");\ncy.dataCy(\"planetName\").should(\"have.text\", planet.name);\ncy.dataCy(\"population\").contains(planet.population);\ncy.dataCy(\"climate\").contains(planet.climate);\ncy.dataCy(\"gravity\").contains(planet.gravity);",
+                  "err": {},
+                  "uuid": "9728febe-d1e3-4a46-88e3-81a58abfeee7",
+                  "parentUUID": "02bc60c7-4fb8-4bc0-a8fa-6832f3852ffb",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "9728febe-d1e3-4a46-88e3-81a58abfeee7"
+              ],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 771,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            },
+            {
+              "uuid": "d5f2f14a-fea3-4ca7-9006-680d05bbe815",
+              "title": "When I search for Star Wars planets",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "should find all Endor's details in the results",
+                  "fullTitle": "Given there is Star Wars information needed When I search for Star Wars planets should find all Endor's details in the results",
+                  "timedOut": null,
+                  "duration": 694,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.dataCy(\"radioPlanets\").click();\ncy.dataCy(\"inputSearch\")\n    .clear()\n    .type(planet.name);\ncy.intercept({\n    method: \"GET\",\n    url: \"https://swapi.dev/api/planets/*\"\n}).as(\"getPlanets\");\ncy.get(\"button\")\n    .contains(\"Search\")\n    .click();\ncy.wait(\"@getPlanets\");\ncy.dataCy(\"planetName\").should(\"have.text\", planet.name);\ncy.dataCy(\"population\").contains(planet.population);\ncy.dataCy(\"climate\").contains(planet.climate);\ncy.dataCy(\"gravity\").contains(planet.gravity);",
+                  "err": {},
+                  "uuid": "8c65ba75-c03e-4866-8076-bf7531f0de47",
+                  "parentUUID": "d5f2f14a-fea3-4ca7-9006-680d05bbe815",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "8c65ba75-c03e-4866-8076-bf7531f0de47"
+              ],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 694,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            },
+            {
+              "uuid": "9aa2cc78-9592-4f64-b4ca-516981e5a1fd",
+              "title": "When I search for Star Wars planets",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "should find all Naboo's details in the results",
+                  "fullTitle": "Given there is Star Wars information needed When I search for Star Wars planets should find all Naboo's details in the results",
+                  "timedOut": null,
+                  "duration": 690,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.dataCy(\"radioPlanets\").click();\ncy.dataCy(\"inputSearch\")\n    .clear()\n    .type(planet.name);\ncy.intercept({\n    method: \"GET\",\n    url: \"https://swapi.dev/api/planets/*\"\n}).as(\"getPlanets\");\ncy.get(\"button\")\n    .contains(\"Search\")\n    .click();\ncy.wait(\"@getPlanets\");\ncy.dataCy(\"planetName\").should(\"have.text\", planet.name);\ncy.dataCy(\"population\").contains(planet.population);\ncy.dataCy(\"climate\").contains(planet.climate);\ncy.dataCy(\"gravity\").contains(planet.gravity);",
+                  "err": {},
+                  "uuid": "90a9594e-77fb-42bd-a28e-f2dd11f6646c",
+                  "parentUUID": "9aa2cc78-9592-4f64-b4ca-516981e5a1fd",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "90a9594e-77fb-42bd-a28e-f2dd11f6646c"
+              ],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 690,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            },
+            {
+              "uuid": "17a15253-02ae-41c1-91d7-54dfc16869cf",
+              "title": "When I search for Star Wars planets",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "should find all Coruscant's details in the results",
+                  "fullTitle": "Given there is Star Wars information needed When I search for Star Wars planets should find all Coruscant's details in the results",
+                  "timedOut": null,
+                  "duration": 980,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.dataCy(\"radioPlanets\").click();\ncy.dataCy(\"inputSearch\")\n    .clear()\n    .type(planet.name);\ncy.intercept({\n    method: \"GET\",\n    url: \"https://swapi.dev/api/planets/*\"\n}).as(\"getPlanets\");\ncy.get(\"button\")\n    .contains(\"Search\")\n    .click();\ncy.wait(\"@getPlanets\");\ncy.dataCy(\"planetName\").should(\"have.text\", planet.name);\ncy.dataCy(\"population\").contains(planet.population);\ncy.dataCy(\"climate\").contains(planet.climate);\ncy.dataCy(\"gravity\").contains(planet.gravity);",
+                  "err": {},
+                  "uuid": "30c62c20-5612-47e5-bfc5-9c7f7b2d0192",
+                  "parentUUID": "17a15253-02ae-41c1-91d7-54dfc16869cf",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "30c62c20-5612-47e5-bfc5-9c7f7b2d0192"
+              ],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 980,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            },
+            {
+              "uuid": "ed3c0406-8f79-430e-9da0-2691196a322f",
+              "title": "When I search for Star Wars planets",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "should find all Kamino's details in the results",
+                  "fullTitle": "Given there is Star Wars information needed When I search for Star Wars planets should find all Kamino's details in the results",
+                  "timedOut": null,
+                  "duration": 1019,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.dataCy(\"radioPlanets\").click();\ncy.dataCy(\"inputSearch\")\n    .clear()\n    .type(planet.name);\ncy.intercept({\n    method: \"GET\",\n    url: \"https://swapi.dev/api/planets/*\"\n}).as(\"getPlanets\");\ncy.get(\"button\")\n    .contains(\"Search\")\n    .click();\ncy.wait(\"@getPlanets\");\ncy.dataCy(\"planetName\").should(\"have.text\", planet.name);\ncy.dataCy(\"population\").contains(planet.population);\ncy.dataCy(\"climate\").contains(planet.climate);\ncy.dataCy(\"gravity\").contains(planet.gravity);",
+                  "err": {},
+                  "uuid": "80025959-4f84-464a-a8f7-a0d0d3d37f51",
+                  "parentUUID": "ed3c0406-8f79-430e-9da0-2691196a322f",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "80025959-4f84-464a-a8f7-a0d0d3d37f51"
+              ],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 1019,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            }
+          ],
+          "passes": [],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 0,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.3.1"
+    },
+    "marge": {
+      "options": null,
+      "version": "5.2.0"
+    }
+  }
+}
